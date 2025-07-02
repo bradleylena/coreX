@@ -1,0 +1,284 @@
+/* Base Styles */
+html {
+  background-color: black;
+  color: white;
+  font-family: "Audiowide", sans-serif;
+  scroll-behavior: smooth;
+  font-size: 18px;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px;
+  position: fixed;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(10px);
+  z-index: 10;
+}
+.navlogo h1 {
+  margin: 0;
+}
+.navlinks ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 20px;
+}
+.navlinks li a {
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+  padding: 10px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+.navlinks li a:hover {
+  background-color: white;
+  color: black;
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(assets/anastase-maragos-9dzWZQWZMdE-unsplash.jpg) center/cover no-repeat;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 5%;
+}
+.heroh1 h1 {
+  font-size: 48px;
+}
+.herop p {
+  font-size: 24px;
+}
+.herobtn {
+  margin-top: 30px;
+}
+.herobtn a {
+  color: white;
+  border: 2px solid;
+  padding: 12px 24px;
+  text-decoration: none;
+  font-size: 22px;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+.herobtn a:hover {
+  background-color: white;
+  color: black;
+}
+
+/* About Us */
+.aboutus {
+  background-color: white;
+  color: black;
+  padding: 80px 20px;
+  border-radius: 10px;
+  margin: 30px;
+}
+.aboutush1,
+.aboutush3,
+.aboutusp {
+  text-align: center;
+}
+.aboutush1 h1 {
+  font-size: 36px;
+}
+.aboutush3 h3 {
+  font-size: 24px;
+  margin-top: 10px;
+}
+.aboutusp p {
+  font-size: 20px;
+  margin-top: 30px;
+}
+
+/* Shop Section */
+.shoph1 {
+  text-align: center;
+  margin: 60px 0 30px;
+}
+.parent {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 0 30px 60px;
+}
+.parent div {
+  background-color: #111;
+  border-radius: 10px;
+  overflow: hidden;
+  padding-bottom: 20px;
+  text-align: center;
+}
+.parent img {
+  width: 100%;
+  height: auto;
+}
+.parent p {
+  padding: 10px 15px;
+}
+.parent a {
+  color: white;
+  border: 2px solid;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+.parent a:hover {
+  background-color: white;
+  color: black;
+}
+
+/* Contact Section */
+.contact-section {
+  padding: 60px 20px;
+  background-color: #000;
+  color: white;
+}
+.contact-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  max-width: 1100px;
+  margin: auto;
+}
+.contact-info,
+.contact-form {
+  flex: 1 1 300px;
+}
+.contact-info h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+.contact-info ul {
+  list-style: none;
+  padding: 0;
+}
+.contact-info li {
+  margin-bottom: 10px;
+}
+.contact-form {
+  border: 2px solid white;
+  padding: 20px;
+  border-radius: 10px;
+}
+.contact-form label {
+  display: block;
+  margin-bottom: 5px;
+}
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+}
+.contact-form button {
+  width: 100%;
+  padding: 12px;
+  background: white;
+  color: black;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: "Audiowide", sans-serif;
+  transition: 0.3s;
+}
+.contact-form button:hover {
+  background: black;
+  color: white;
+  border: 1px solid white;
+}
+
+/* Mobile Fix */
+@media (max-width: 768px) {
+  .navlinks ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .heroh1 h1 {
+    font-size: 32px;
+  }
+
+  .herop p {
+    font-size: 18px;
+  }
+
+  .herobtn a {
+    font-size: 18px;
+  }
+
+  .aboutush1 h1 {
+    font-size: 28px;
+  }
+
+  .aboutush3 h3 {
+    font-size: 20px;
+  }
+
+  .aboutusp p {
+    font-size: 18px;
+  }
+}
+.hamburger {
+  display: none;
+  font-size: 28px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+/* Mobile Nav */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+    z-index: 11;
+  }
+
+  .navlinks {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.95);
+    width: 100%;
+    height: auto;
+    transform: translateY(-200%);
+    transition: transform 0.3s ease-in-out;
+    text-align: center;
+    padding: 20px 0;
+  }
+
+  .navlinks.active {
+    transform: translateY(0);
+  }
+
+  .navlinks ul {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .navlinks li a {
+    font-size: 20px;
+  }
+}
+footer p {
+  text-align: center;
+}
